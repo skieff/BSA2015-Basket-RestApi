@@ -1,0 +1,28 @@
+{
+  "name": "skieff/BSA2015-Basket-RestApi",
+  "description": "Basket library example for BSA2015",
+  "minimum-stability": "dev",
+  "license": "",
+  "authors": [
+    {
+      "name": "Sergey Golovin",
+      "email": "skyeff@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/skieff/BSA2015-Basket"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "skieff/BSA2015-Basket": "dev-master",
+    "slim/slim": "2.6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "BSA2015\\Basket\\": "src/"
+    }
+  }
+}
