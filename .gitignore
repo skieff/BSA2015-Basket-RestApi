@@ -47,4 +47,8 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
-
+node_modules/
+vendor/
+composer.phar
+composer.lock
+*.log

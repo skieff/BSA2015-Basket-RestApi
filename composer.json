@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=5.6.0",
-    "skieff/BSA2015-Basket": "dev-master",
+    "skieff/BSA2015-Basket": "v1.1",
     "slim/slim": "2.6.2"
   },
   "autoload": {

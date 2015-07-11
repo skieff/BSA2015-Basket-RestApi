@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a73138880e91f6fc1ee821a81862126",
+    "hash": "21a6e9a0d5b4b4b9764c789ed7cd9683",
     "packages": [
         {
             "name": "skieff/BSA2015-Basket",
-            "version": "dev-master",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/skieff/BSA2015-Basket.git",
-                "reference": "df79db7dbfc5d3effe18dc27d6aa7f7b2bb77722"
+                "reference": "3aa59d27512ff96f7ac9844b296f8a3d8c2c23fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/skieff/BSA2015-Basket/zipball/df79db7dbfc5d3effe18dc27d6aa7f7b2bb77722",
-                "reference": "df79db7dbfc5d3effe18dc27d6aa7f7b2bb77722",
+                "url": "https://api.github.com/repos/skieff/BSA2015-Basket/zipball/3aa59d27512ff96f7ac9844b296f8a3d8c2c23fa",
+                "reference": "3aa59d27512ff96f7ac9844b296f8a3d8c2c23fa",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 "source": "https://github.com/skieff/BSA2015-Basket/tree/master",
                 "issues": "https://github.com/skieff/BSA2015-Basket/issues"
             },
-            "time": "2015-07-04 15:04:07"
+            "time": "2015-07-11 08:34:32"
         },
         {
             "name": "slim/slim",
@@ -142,9 +142,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "skieff/bsa2015-basket": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
