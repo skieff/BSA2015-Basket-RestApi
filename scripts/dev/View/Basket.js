@@ -8,11 +8,17 @@ class Basket extends Backbone.View {
     }
 
     initialize() {
+        this.listenTo(this.model, 'change:totalPrice', this.onTotalPriceChanged);
         this.render(this.model);
     }
 
+    //noinspection JSUnusedLocalSymbols
+    onTotalPriceChanged(basket, newTotalPrice) {
+        this.$('.price').text(newTotalPrice);
+    }
+
     render(basket) {
-        this.$el.append(basket.id);
+        this.$el.append(basket.id + ': <span class="price">' + basket.get('totalPrice') + '</span>');
         this.$el.append((new BasketItemCollectionView({basket: this.model})).$el);
     }
 }

@@ -21,9 +21,19 @@ class BasketItemCollection extends Backbone.View {
 
         this.listenTo(this.collection, 'reset', this.onCollectionReset);
         this.listenTo(this.collection, 'add', this.onAdd);
+        this.listenTo(this.collection, 'destroy', this.onDelete);
+        this.listenTo(this.collection, 'sync', this.onCollectionSync);
         this.listenTo(this.newBasketItem, 'save-item', this.onSaveItem);
 
         this.collection.fetch({reset: true});
+    }
+
+    onDelete() {
+        this.basket.fetch();
+    }
+
+    onCollectionSync() {
+        this.basket.fetch();
     }
 
     onSaveItem(basketItem) {

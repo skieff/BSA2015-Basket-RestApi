@@ -50,9 +50,21 @@ define(['exports', 'module', 'libs/backbone', './BasketItem', 'Model/BasketItemC
 
                 this.listenTo(this.collection, 'reset', this.onCollectionReset);
                 this.listenTo(this.collection, 'add', this.onAdd);
+                this.listenTo(this.collection, 'destroy', this.onDelete);
+                this.listenTo(this.collection, 'sync', this.onCollectionSync);
                 this.listenTo(this.newBasketItem, 'save-item', this.onSaveItem);
 
                 this.collection.fetch({ reset: true });
+            }
+        }, {
+            key: 'onDelete',
+            value: function onDelete() {
+                this.basket.fetch();
+            }
+        }, {
+            key: 'onCollectionSync',
+            value: function onCollectionSync() {
+                this.basket.fetch();
             }
         }, {
             key: 'onSaveItem',

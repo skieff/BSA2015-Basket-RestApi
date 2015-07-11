@@ -8,6 +8,13 @@ class BasketCollection extends Backbone.View {
         return 'ul';
     }
 
+    //noinspection JSMethodCanBeStatic
+    attributes() {
+        return {
+            'class' : 'basket-list'
+        }
+    }
+
     initialize() {
         this.listenTo(this.collection, 'reset', this.onCollectionReset);
 

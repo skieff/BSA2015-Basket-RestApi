@@ -55,15 +55,12 @@ define(['exports', 'module', 'libs/backbone', './ProductSelect', 'Model/ProductC
             key: 'render',
             value: function render(basketItem) {
                 if (basketItem.isNew()) {
-                    this.$el.append(new _ProductSelect2['default']({ model: basketItem, collection: _productCollection['default'] }).$el);
-                    this.$el.append('<input type="number" min="1" name="amount" />');
-                    this.$el.append('<button name="add">Add</button>');
+                    this.$el.append(_Backbone['default'].$('<div class="field-container"></div>').append(new _ProductSelect2['default']({ model: basketItem, collection: _productCollection['default'] }).$el));
+                    this.$el.append('<div class="field-container"><button name="add">Add</button></div>');
                 } else {
-                    this.$el.append(basketItem.get('name') + ': ');
-                    this.$el.append('<input type="number" min="1" name="amount" value="' + basketItem.get('itemsAmount') + '" />');
-                    this.$el.append(' x ' + basketItem.get('price') + ' = ' + basketItem.get('totalPrice'));
-                    this.$el.append('<button name="save">Save</button>');
-                    this.$el.append('<button name="delete">Delete</button>');
+                    this.$el.append(_Backbone['default'].$('<div class="field-container"></div>').append(basketItem.get('name') + ': '));
+                    this.$el.append(_Backbone['default'].$('<div class="field-container"></div>').append('<input type="number" min="1" name="amount" value="' + basketItem.get('itemsAmount') + '" />').append(' x ' + basketItem.get('price') + ' = ' + basketItem.get('totalPrice')));
+                    this.$el.append(_Backbone['default'].$('<div class="field-container"></div>').append('<button name="save">Save</button>').append('<button name="delete">Delete</button>'));
                 }
             }
         }, {

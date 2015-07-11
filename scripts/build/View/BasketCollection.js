@@ -32,6 +32,15 @@ define(['exports', 'module', 'libs/backbone', './Basket'], function (exports, mo
                 return 'ul';
             }
         }, {
+            key: 'attributes',
+
+            //noinspection JSMethodCanBeStatic
+            value: function attributes() {
+                return {
+                    'class': 'basket-list'
+                };
+            }
+        }, {
             key: 'initialize',
             value: function initialize() {
                 this.listenTo(this.collection, 'reset', this.onCollectionReset);

@@ -34,12 +34,20 @@ define(['exports', 'module', 'libs/backbone', './BasketItemCollection'], functio
         }, {
             key: 'initialize',
             value: function initialize() {
+                this.listenTo(this.model, 'change:totalPrice', this.onTotalPriceChanged);
                 this.render(this.model);
+            }
+        }, {
+            key: 'onTotalPriceChanged',
+
+            //noinspection JSUnusedLocalSymbols
+            value: function onTotalPriceChanged(basket, newTotalPrice) {
+                this.$('.price').text(newTotalPrice);
             }
         }, {
             key: 'render',
             value: function render(basket) {
-                this.$el.append(basket.id);
+                this.$el.append(basket.id + ': <span class="price">' + basket.get('totalPrice') + '</span>');
                 this.$el.append(new _BasketItemCollectionView['default']({ basket: this.model }).$el);
             }
         }]);
